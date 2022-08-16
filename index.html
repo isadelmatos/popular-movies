@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - consumindo a API do TMDB</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+
+        <h1>Filmes populares</h1>
+
+        <div class="movies-selecion-inputs">
+            <form class="search-input-container">
+                <input type="search" class="input-search-movie" placeholder="Digite algum filme para pesquisar..." autocomplete="off">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                </input>
+            </form>
+            <div>
+                <input type="checkbox" class="input-check-favorite-movies" id="favorite-movies">
+                <label for="favorite-movies">Mostrar apenas meus filmes favoritos</label>
+            </div>
+        </div>
+
+        <section class="movies">
+            <ul>
+                <li class="movie-card">
+                    <div class="movie-card__infos">
+                        <div>
+                            <strong class="movie-card__infos__title">O Predador: A Caçada (2022)</strong>
+                            <div class="movie-card__infos__details">
+                                <small class="movie-card__infos__detail detail-rating" title="Nota de avaliação"> 
+                                    <span class="label-accessiblity">Nota de avaliação</span>8.1
+                                </small>
+                                <small class="movie-card__infos__detail detail-favorite">
+                                    <span class="label-accessiblity">Ação</span>Favoritar
+                                </small>
+                            </div>
+                        </div>
+                        <div class="poster-proportion">
+                            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/g7Ii9sYAFG96W7cvMQ4zXq39RJ5.jpg" class="movie-card__infos__poster" alt="Poster do filme">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="movie_card__sinopsis">Ambientado no mundo da Nação Comanche no início de 1700, "O Predador: A Caçada" é a história não contada de uma jovem guerreira altamente qualificada, desesperada para proteger seu povo do perigo iminente. Ela persegue e finalmente confronta sua presa, que acaba sendo um predador alienígena altamente evoluído com um arsenal tecnologicamente avançado, resultando em um confronto brutal e aterrorizante entre os adversários.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
