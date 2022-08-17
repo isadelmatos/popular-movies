@@ -1,0 +1,24 @@
+{
+  "name": "popular-movies-dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "lite-server -c config/bs-config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isadelmatos/popular-movies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isadelmatos/popular-movies/issues"
+  },
+  "homepage": "https://github.com/isadelmatos/popular-movies#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
