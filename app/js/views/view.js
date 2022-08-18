@@ -14,7 +14,7 @@ export class View {
                     return `<li class="movie-card">
                         <div class="movie-card__infos">
                             <div>
-                                <strong class="movie-card__infos__title">${item.title} (${this.formateDate(item.yearOfRelease)})</strong>
+                                <strong class="movie-card__infos__title">${item.title} (${this.formatDate(item.yearOfRelease)})</strong>
                                 <div class="movie-card__infos__details">
                                     <small class="movie-card__infos__detail detail-rating" title="Nota de avaliação"> 
                                         <span class="label-accessiblity">Nota de avaliação</span>${item.rating}
@@ -29,7 +29,7 @@ export class View {
                             </div>
                         </div>
                         <div>
-                            <p class="movie_card__sinopsis">${item.sinopsis}</p>
+                            <p class="movie_card__sinopsis">${item.synopsis}</p>
                         </div>
                     </li>`
                 }).join('')}
