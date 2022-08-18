@@ -1,4 +1,4 @@
-let posterPath = 'https://image.tmdb.org/t/p/original/';
+let posterPath = 'https://image.tmdb.org/t/p/w500/';
 
 export class View {
 
@@ -29,7 +29,7 @@ export class View {
                             </div>
                         </div>
                         <div>
-                            <p class="movie_card__sinopsis">${item.synopsis}</p>
+                            <p class="movie_card__sinopsis">${this.formatSynopsis(item.synopsis)}</p>
                         </div>
                     </li>`
                 }).join('')}
@@ -44,5 +44,14 @@ export class View {
 
     formatDate(date) {
         return date.slice(0, 4);
+    }
+
+    formatSynopsis(text) {
+
+        if(text === "") {
+            return 'Sem sinopse disponível';
+        }
+
+        return text;
     }
 }
