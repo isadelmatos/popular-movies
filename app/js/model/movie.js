@@ -1,4 +1,4 @@
-export class PopularMovie {
+export class Movie {
     constructor(title, yearOfRelease, rating, posterUrl, synopsis, isFavorite) {
         this.title = title;
         this.yearOfRelease = yearOfRelease;

@@ -40,10 +40,10 @@ export class MoviesTemplate extends View {
     
 
     formatDate(date) {
-        if(date === '') {
+        if(date === '' || date === undefined) {
             return ' ';
         } 
-        return `(${date.slice(0, 4)})`;
+        return `(${date.slice(0, 4)})`
     }
 
     formatSynopsis(text) {

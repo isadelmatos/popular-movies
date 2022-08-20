@@ -1,4 +1,4 @@
-import { PopularMovie } from '../model/popular-movie.js';
+import { Movie } from '../model/movie.js';
 
 export class MoviesFromTMDB {
 
@@ -11,7 +11,7 @@ export class MoviesFromTMDB {
         }
 
         return data.results.map(movie => {
-            return new PopularMovie(
+            return new Movie(
                 movie.title,
                 movie.release_date,
                 movie.vote_average,
