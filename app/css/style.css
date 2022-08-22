@@ -165,9 +165,7 @@ h1 {
     cursor: pointer;
 }
 
-.detail-favorite::before {
-    font-family:'Bootstrap-icons';
-    content: '\F417';
+.icon-fav {
     color: #BA0707;
     margin-right: 0.75rem;
 }

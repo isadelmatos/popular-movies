@@ -6,7 +6,11 @@ export class ListOfMovies {
     }
 
     getList() {
-        const list = this.movies;
+        let list = this.movies;
         return list;
+    }
+
+    setList() {
+        return this.movies;
     }
 }

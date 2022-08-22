@@ -12,5 +12,4 @@ formSearch.addEventListener('keypress', (event) => {
         controller.getResultsForSearchMovie(queryValue);
         event.target.value = "";
     }
-})
-
+});

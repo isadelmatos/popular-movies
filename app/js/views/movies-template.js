@@ -8,10 +8,9 @@ export class MoviesTemplate extends View {
         if(typeof model === 'string') {
             return `<span style="display: flex; justify-content: center; font-size: 2rem; font-weight: 500;">${model}</span>`;
         }
-
         return `
             <ul>
-                ${model.getList().map(item => {
+                ${model.getList().map((item, index) => {
                     return `<li class="movie-card">
                         <div class="movie-card__infos">
                             <div>
@@ -20,8 +19,8 @@ export class MoviesTemplate extends View {
                                     <small class="movie-card__infos__detail detail-rating" title="Nota de avaliação"> 
                                         <span class="label-accessiblity">Nota de avaliação</span>${item.rating}
                                     </small>
-                                    <small class="movie-card__infos__detail detail-favorite">
-                                        <span class="label-accessiblity">Ação</span>Favoritar
+                                    <small class="movie-card__infos__detail detail-favorite"> 
+                                        <i class="bi ${this.formatIconFavorite(item)} icon-fav"></i>Favoritar
                                     </small>
                                 </div>
                             </div>
@@ -53,5 +52,12 @@ export class MoviesTemplate extends View {
         }
 
         return text;
+    }
+
+    formatIconFavorite(item) {
+        if(item.isFavorite === true) {
+            return 'bi-heart-fill';
+        }
+        return 'bi-heart';
     }
 }
