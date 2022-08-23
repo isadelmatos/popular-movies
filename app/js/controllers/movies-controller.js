@@ -89,4 +89,13 @@ export class Controller {
     updateLocalStorage(list) {
         return localStorage.setItem('listOfFavoriteMovies', JSON.stringify(list));
     }
+
+    getFavoriteMovies(list) {
+        let favoriteMovies = new ListOfMovies();
+        list.map((movie) => {
+            favoriteMovies.addMovieToList(movie);
+        });
+        this.moviesTemplate.render(favoriteMovies);
+        this.handleFavorite(favoriteMovies);
+    }
 }

@@ -10,7 +10,7 @@ export class MoviesTemplate extends View {
         }
         return `
             <ul>
-                ${model.getList().map((item, index) => {
+                ${model.getList().map((item) => {
                     return `<li class="movie-card">
                         <div class="movie-card__infos">
                             <div>
@@ -20,12 +20,12 @@ export class MoviesTemplate extends View {
                                         <span class="label-accessiblity">Nota de avaliação</span>${item.rating}
                                     </small>
                                     <small class="movie-card__infos__detail detail-favorite"> 
-                                        <i class="bi ${this.formatIconFavorite(item)} icon-fav"></i>Favoritar
+                                        <i class="bi ${this.formatIconFavorite(item.isFavorite)} icon-fav"></i>Favoritar
                                     </small>
                                 </div>
                             </div>
                             <div class="poster-proportion">
-                                <img src=${posterPath}${item.posterUrl} class="movie-card__infos__poster" alt="Poster do filme">
+                                <img src=${this.formatPoster(item)} class="movie-card__infos__poster" alt="Poster do filme">
                             </div>
                         </div>
                         <div>
@@ -44,6 +44,20 @@ export class MoviesTemplate extends View {
         } 
         return `(${date.slice(0, 4)})`
     }
+    
+    formatIconFavorite(isFavorite) {
+        if(isFavorite === true) {
+            return 'bi-heart-fill';
+        }
+        return 'bi-heart';
+    }
+
+    formatPoster(item) {
+        if(item.posterUrl === null) {
+            return './assets/img/poster_placeholder.jpg';
+        }
+        return `${posterPath}${item.posterUrl}`;
+    }
 
     formatSynopsis(text) {
 
@@ -54,10 +68,4 @@ export class MoviesTemplate extends View {
         return text;
     }
 
-    formatIconFavorite(item) {
-        if(item.isFavorite === true) {
-            return 'bi-heart-fill';
-        }
-        return 'bi-heart';
-    }
 }
